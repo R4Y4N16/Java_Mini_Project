@@ -4,9 +4,6 @@ import javax.swing.*;
 import OOP.ec22431.A8.contributions.*;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import java.util.Random;
 
 public class GUIVisitor_ec22431 extends Room{
@@ -17,6 +14,9 @@ public class GUIVisitor_ec22431 extends Room{
     private JPanel panelMain;
     private JPanel Inventory;
     private JTextArea storyText;
+    private JLabel inventoryN;
+    private JLabel goldC;
+    private JLabel itemC;
 
     private boolean lightsOn; //ON or OFF
     private boolean trunkEmpty; //Empty or Not
@@ -32,10 +32,9 @@ public class GUIVisitor_ec22431 extends Room{
     public static void main(String[] args) {
         JFrame frame = new JFrame("Room (ec22431)");
         frame.setContentPane(new GUIVisitor_ec22431().panelMain);
+        frame.getContentPane().setPreferredSize(new Dimension(800, 600));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(Color.BLACK);
-        frame.setSize(600,600);
-        frame.setMinimumSize(new Dimension(600, 600));
         frame.setLocationRelativeTo(null);
         frame.pack();
         frame.setVisible(true);
@@ -170,6 +169,7 @@ public class GUIVisitor_ec22431 extends Room{
                     gold = rand.nextInt(temp)+1;
                     visitor.giveGold(gold);
                     storyText.append("You take " + gold + "gold bars");
+                    goldC.setText("Gold: "+gold);
                     storyText.append("You also find a key and a pendant inside.");
                     option1.setText("Take the Pendent");
                     option2.setText("Take the key");
@@ -180,11 +180,23 @@ public class GUIVisitor_ec22431 extends Room{
                         storyText.append("You have too much gold, in order to take an item you drop a gold bar");
                         visitor.takeGold(1);
                         gold--;
+                        goldC.setText("Gold: "+gold);
+
                     }
-                    option1.addActionListener(actionEvent -> visitor.giveItem(pendant));
-                    option2.addActionListener(actionEvent -> visitor.giveItem(key));
-                    option3.addActionListener(actionEvent -> optionD = Direction.TO_NORTH);
-                    option4.addActionListener(actionEvent -> optionD = Direction.TO_SOUTH);
+                    option1.addActionListener(actionEvent ->{
+                        visitor.giveItem(pendant);
+                        if(visitor.hasEqualItem(key)){
+                            itemC.setText("Items: Key, Pendant");
+                        }
+                        else{itemC.setText("Items: Pendant");}
+                    });
+                    option2.addActionListener(actionEvent -> {
+                        visitor.giveItem(key);
+                        if(visitor.hasEqualItem(pendant)){
+                            itemC.setText("Items: Pendant, Key");
+                        }
+                        else{itemC.setText("Items: Key");}
+                    });
                 }
                 else {
                     storyText.append("You cannot take anymore gold");
@@ -193,11 +205,23 @@ public class GUIVisitor_ec22431 extends Room{
                         storyText.append("You have too much gold, in order to take an item you drop a gold bar");
                         visitor.takeGold(1);
                         gold--;
+                        goldC.setText("Gold: "+gold);
+
                     }
-                    option1.addActionListener(actionEvent -> visitor.giveItem(pendant));
-                    option2.addActionListener(actionEvent -> visitor.giveItem(key));
-                    option3.addActionListener(actionEvent -> optionD = Direction.TO_NORTH);
-                    option4.addActionListener(actionEvent -> optionD = Direction.TO_SOUTH);
+                    option1.addActionListener(actionEvent ->{
+                        visitor.giveItem(pendant);
+                        if(visitor.hasEqualItem(key)){
+                            itemC.setText("Items: Key, Pendant");
+                        }
+                        else{itemC.setText("Items: Pendant");}
+                    });
+                    option2.addActionListener(actionEvent -> {
+                        visitor.giveItem(key);
+                        if(visitor.hasEqualItem(pendant)){
+                            itemC.setText("Items: Pendant, Key");
+                        }
+                        else{itemC.setText("Items: Key");}
+                    });
                 }
             } else {
                 storyText.append("You open the chest and find a key and a pendant inside.");
@@ -205,11 +229,23 @@ public class GUIVisitor_ec22431 extends Room{
                     storyText.append("You have too much gold, in order to take an item you drop a gold bar");
                     visitor.takeGold(1);
                     gold--;
+                    goldC.setText("Gold: "+gold);
+
                 }
-                option1.addActionListener(actionEvent -> visitor.giveItem(pendant));
-                option2.addActionListener(actionEvent -> visitor.giveItem(key));
-                option3.addActionListener(actionEvent -> optionD = Direction.TO_NORTH);
-                option4.addActionListener(actionEvent -> optionD = Direction.TO_SOUTH);
+                option1.addActionListener(actionEvent ->{
+                    visitor.giveItem(pendant);
+                    if(visitor.hasEqualItem(key)){
+                        itemC.setText("Items: Key, Pendant");
+                    }
+                    else{itemC.setText("Items: Pendant");}
+                });
+                option2.addActionListener(actionEvent -> {
+                    visitor.giveItem(key);
+                    if(visitor.hasEqualItem(pendant)){
+                        itemC.setText("Items: Pendant, Key");
+                    }
+                    else{itemC.setText("Items: Key");}
+                });
             }
             trunkEmpty = true;
         }
