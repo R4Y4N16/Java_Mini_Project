@@ -1,10 +1,9 @@
-package OOP.ec22431.A8.contributions;
-
-public class Item {
+package OOP.ec22431.A8;
+class Item {
     
-    public final String name;
+    final String name;
     
-    public Item(String nameOfItem) {
+    Item(String nameOfItem) {
         name = nameOfItem;
     }
     

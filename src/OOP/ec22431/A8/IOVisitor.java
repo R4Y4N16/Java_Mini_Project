@@ -1,10 +1,9 @@
-package OOP.ec22431.A8.contributions;
-
+package OOP.ec22431.A8;
 import java.io.PrintStream;
 import java.io.InputStream;
 import java.util.Scanner;
 
-public class IOVisitor implements Visitor {
+class IOVisitor implements Visitor {
          
     private PrintStream out;
     private Scanner in;

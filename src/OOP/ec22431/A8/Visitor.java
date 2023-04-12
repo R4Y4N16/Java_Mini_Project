@@ -1,6 +1,5 @@
-package OOP.ec22431.A8.contributions;
-
-public interface Visitor {
+package OOP.ec22431.A8;
+interface Visitor {
     
     void tell(String messageForVisitor);
     

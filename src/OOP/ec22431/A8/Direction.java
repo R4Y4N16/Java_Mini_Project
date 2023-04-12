@@ -1,15 +1,15 @@
-package OOP.ec22431.A8.contributions;//import java.util.List;
-
-public class Direction {
+//import java.util.List;
+package OOP.ec22431.A8;
+class Direction {
        
     // Hide constructor so unofficial directions cannot be created.
     private Direction() {};
     
     // Destination's prespective.
-    public static final Direction FROM_SOUTH = new Direction();
-    public static final Direction FROM_WEST = new Direction();
-    public static final Direction FROM_NORTH = new Direction();
-    public static final Direction FROM_EAST = new Direction();
+    static final Direction FROM_SOUTH = new Direction();
+    static final Direction FROM_WEST = new Direction();
+    static final Direction FROM_NORTH = new Direction();
+    static final Direction FROM_EAST = new Direction();
     
     //static final List<Direction> LIST_OF_DIRECTIONS = 
     //    List.of(FROM_SOUTH, FROM_WEST, FROM_NORTH, FROM_EAST);
@@ -17,9 +17,9 @@ public class Direction {
     //static final int NUMBER_OF_DIRECTIONS = LIST_OF_DIRECTIONS.size();
      
     // Origin's perspective.
-    public static final Direction TO_NORTH = FROM_SOUTH;
-    public static final Direction TO_EAST = FROM_WEST;
-    public static final Direction TO_SOUTH = FROM_NORTH;
+    static final Direction TO_NORTH = FROM_SOUTH;
+    static final Direction TO_EAST = FROM_WEST;
+    static final Direction TO_SOUTH = FROM_NORTH;
     public static final Direction TO_WEST = FROM_EAST;
 
     static final Direction UNDEFINED = new Direction();

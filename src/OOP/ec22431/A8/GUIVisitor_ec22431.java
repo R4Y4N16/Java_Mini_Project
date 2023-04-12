@@ -1,11 +1,7 @@
 
-//The inventory will add the words key or pendant even if the user presses not accepted
-//Add delay
-//Fix the story structure somehow :(
 package OOP.ec22431.A8;
 
 import javax.swing.*;
-import OOP.ec22431.A8.contributions.*;
 
 import java.awt.*;
 import java.util.Random;
@@ -168,7 +164,7 @@ public class GUIVisitor_ec22431 implements Visitor{
                     int temp = 10-purse;
                     purse = rand.nextInt(temp)+1;
                     visitor.giveGold(pos);
-                    storyText.append("\nYou take " + purse + "gold bars");
+                    storyText.append("\nYou take " + purse + " gold bars");
                     goldC.setText("Gold: "+purse);
                     storyText.append("\nYou also find a key and a pendant inside.");
                     option1.setText("Take the Pendant");

@@ -1,4 +1,4 @@
-package OOP.ec22431.A8.contributions;
+package OOP.ec22431.A8;
 
 interface Visitable {
     

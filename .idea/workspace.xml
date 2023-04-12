@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20586bae-8da6-441a-91b1-ad76fbb351c8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/Room.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22431.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22431.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22923.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22923.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/IOVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/IOVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22431.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22923.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Visitable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/Visitable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/Visitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +70,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rayan\IdeaProjects\A8-ec22431\src\OOP\ec22431\A8" />
       <recent name="C:\Users\rayan\IdeaProjects\A8-ec22431\src\OOP\ec22431\contributions" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -142,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681295425207</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Made changes">
+      <created>1681306268581</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681306268581</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +164,7 @@
     <MESSAGE value="Added an inventory and fixed sizing issues" />
     <MESSAGE value="Moved Code from A8 to Mini Project repository and made a few changed" />
     <MESSAGE value="Added contribution folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added contribution folder" />
+    <MESSAGE value="Made changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made changes" />
   </component>
 </project>
