@@ -8,6 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22431.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22431.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22923.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/A8/contributions/Room_ec22923.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,23 +41,28 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2O6547fvl8kib9LnX7D1krDBBVp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;391&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/rayan/IdeaProjects/untitled&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "391",
+    "last_opened_file_path": "C:/Users/rayan/IdeaProjects/untitled",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rayan\IdeaProjects\A8-ec22431\src\OOP\ec22431\contributions" />
@@ -119,13 +128,29 @@
       <option name="project" value="LOCAL" />
       <updated>1681137344497</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Moved Code from A8 to Mini Project repository and made a few changed">
+      <created>1681295301626</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681295301626</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added contribution folder">
+      <created>1681295425207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681295425207</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created the form and java file for this project. Issue: the button doesn't point to anything yet (I want it to return an int, but that isn't possible" />
     <MESSAGE value="Created a running story" />
     <MESSAGE value="Added an inventory and fixed sizing issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added an inventory and fixed sizing issues" />
+    <MESSAGE value="Moved Code from A8 to Mini Project repository and made a few changed" />
+    <MESSAGE value="Added contribution folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added contribution folder" />
   </component>
 </project>

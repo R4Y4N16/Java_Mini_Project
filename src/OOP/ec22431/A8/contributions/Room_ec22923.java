@@ -1,6 +1,6 @@
 package OOP.ec22431.A8.contributions;
 
-public class Room_ec22923 extends Room {
+public abstract class Room_ec22923 extends Room {
 
     public static final Item crystal = new Item("Crystal");
     static final Item goldenKey = new Item("Golden Key");

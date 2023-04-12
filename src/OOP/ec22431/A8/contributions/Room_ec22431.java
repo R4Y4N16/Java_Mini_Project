@@ -3,7 +3,7 @@ package OOP.ec22431.A8.contributions;
 import java.util.ArrayList;
 import java.util.Random;
 
-class Room_ec22431 extends Room {
+abstract class Room_ec22431 extends Room {
     private boolean lightsOn; //ON or OFF
     private boolean trunkEmpty; //Empty or Not
     private final boolean ghostFriendly; //Friendly or Grumpy

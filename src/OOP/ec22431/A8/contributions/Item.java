@@ -2,7 +2,7 @@ package OOP.ec22431.A8.contributions;
 
 public class Item {
     
-    final String name;
+    public final String name;
     
     public Item(String nameOfItem) {
         name = nameOfItem;

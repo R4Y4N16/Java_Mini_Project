@@ -1,3 +1,7 @@
 package OOP.ec22431.A8.contributions;
 
-public abstract class Room implements Visitable { }
+abstract class Room implements Visitable {
+    public abstract char getChoice(String d, char[] a);
+
+    public abstract boolean giveItem(Item x);
+}
