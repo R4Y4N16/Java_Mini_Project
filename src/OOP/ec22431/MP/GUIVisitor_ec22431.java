@@ -1,12 +1,11 @@
 
-package OOP.ec22431.A8;
+package OOP.ec22431.MP;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class GUIVisitor_ec22431 implements Visitor {
     static JFrame frame = new JFrame("Room (ec22431)");
@@ -23,23 +22,30 @@ public class GUIVisitor_ec22431 implements Visitor {
     private JLabel Title;
 
     private boolean lightsOn; //ON or OFF
-    //Empty or Not
     private final boolean ghostFriendly; //Friendly or Grumpy
     private boolean isCold; //Chilly or Hot (Stuffy)
     private int purse;
     static final Item key = new Item("Key");
     static final Item pendant = new Item("Pendant");
     public Map<Item, Integer> inventory;
-    public Direction optionD;
+    private Direction optionD;
+    private boolean T = false;
+    private boolean trunkEmpty;
+
 
     public static void main(String[] args) {
-        frame.setContentPane(new GUIVisitor_ec22431().panelMain);
-        frame.getContentPane().setPreferredSize(new Dimension(800, 600));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setBackground(Color.BLACK);
-        frame.setLocationRelativeTo(null);
-        frame.pack();
-        frame.setVisible(true);
+        try {
+            frame.setContentPane(new GUIVisitor_ec22431().panelMain);
+            frame.getContentPane().setPreferredSize(new Dimension(800, 600));
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.getContentPane().setBackground(Color.BLACK);
+            frame.setLocationRelativeTo(null);
+            frame.pack();
+            frame.setVisible(true);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public GUIVisitor_ec22431() {
@@ -54,12 +60,11 @@ public class GUIVisitor_ec22431 implements Visitor {
         storyText.setEditable(false);
         inventory = new HashMap<>();
         Visitor v = new IOVisitor(System.out,System.in);
-        visit(v,Direction.FROM_SOUTH);
-
+        Direction d = visit(v,Direction.FROM_SOUTH);
     }
 
     public Direction visit(Visitor visitor, Direction direction) {
-        AtomicBoolean tester = new AtomicBoolean(false);
+        
         if (direction == Direction.FROM_NORTH) {
             tell("You entered the room from the north.");
         } else if (direction == Direction.FROM_EAST) {
@@ -93,14 +98,14 @@ public class GUIVisitor_ec22431 implements Visitor {
                 if (!ghostFriendly) {
                     isCold = false;
                     tell("\nThe air grows heavy and stale and suddenly the temperature in the room rises rapidly. Your clothes begin sticking to you as the heat comes unbearable. The ghost begins to screech at you, it's voice shattering the stillness of the night. Its voice is deafening, seemly coming from all around you. \"YOU KILLED HER!\", the ghost shrieks with unmistakable clarity. You attempt to defend yourself but your words catch in your throat. With the ghost's accusing scream still ringing in your ears, you panic and look for an escape. You search for a way out, but the door is locked, and there's no way to escape. As you desperately search for a way out");
-                    if (visitor.hasIdenticalItem(Room_ec22923.crystal)) {
+                    if (hasIdenticalItem(Room_ec22923.crystal)) {
                         tell("\nThe crystal glows brightly in your hand, guiding you to an old chest in the corner of the room and you begin searching through it with trembling hands, hoping to find the key to unlock the door.");
                     }
                     TrunkContent(visitor);
 
                 } else {
                     tell("\nAs the ghostly figure floats towards you, your heart races with fear. You're still curious about the entity despite the sudden movement that caused you to fall over the table. As it draws closer, you can start to make out its features, you can now see the kind and gentle expressions on her pale face. You realise she is not just any ghost but a mother who must of once lived in this house, she must have died inside this house and now as a ghost is free to watch over the house.");
-                    if (visitor.hasIdenticalItem(Room_ec22923.crystal)) {
+                    if (hasIdenticalItem(Room_ec22923.crystal)) {
                         tell("\nShe points to your crystal and then to the chest in the corner of the room. You take the hint and walk towards the chest");
                     }
                     TrunkContent(visitor);
@@ -120,13 +125,9 @@ public class GUIVisitor_ec22431 implements Visitor {
                 });
                 option2.addActionListener(actionEvent12 -> TrunkContent(visitor));
             }
-            tester.set(true);
         });
 
-        option2.addActionListener(actionEvent -> {
-            TrunkContent(visitor);
-            tester.set(true);
-        });
+        option2.addActionListener(actionEvent -> TrunkContent(visitor));
 
         option3.addActionListener(actionEvent -> {
             tell("\nYou look around the room and see a painting and the chest");
@@ -138,33 +139,38 @@ public class GUIVisitor_ec22431 implements Visitor {
                 TrunkContent(visitor);
             });
             option2.addActionListener(actionEvent15 -> TrunkContent(visitor));
-            tester.set(true);
         });
-        if (tester.get()) {
-            tell("\nYou use the key and leave the room, then you enter a tiny hallway, you can either go left, right or forwards");
-            option3.setVisible(true);
-            option4.setVisible(true);
-            option1.setText("Go Left");
-            option2.setText("Go Right");
-            option3.setText("Go Forwards");
-            option4.setText("Go Backwards");
-            option1.addActionListener(actionEvent -> optionD = Direction.TO_EAST);
-            option2.addActionListener(actionEvent -> optionD = Direction.TO_WEST);
-            option3.addActionListener(actionEvent -> optionD = Direction.TO_NORTH);
-            option4.addActionListener(actionEvent -> optionD = Direction.TO_SOUTH);
+        if (T) {
+            exit();
         }
         return optionD;
     }
+
+    public void exit() {
+        tell("\nYou use the key and leave the room, then you enter a tiny hallway, you can either go left, right or forwards");
+        option3.setVisible(true);
+        option4.setVisible(true);
+        option1.setText("Go Left");
+        option2.setText("Go Right");
+        option3.setText("Go Forwards");
+        option4.setText("Go Backwards");
+        option1.addActionListener(actionEvent -> optionD = Direction.TO_EAST);
+        option2.addActionListener(actionEvent -> optionD = Direction.TO_WEST);
+        option3.addActionListener(actionEvent -> optionD = Direction.TO_NORTH);
+        option4.addActionListener(actionEvent -> optionD = Direction.TO_SOUTH);
+    }
+
     public void TrunkContent(Visitor visitor) {
+        if (!trunkEmpty){
             Random rand = new Random();
             if (rand.nextInt(2) == 1) {
                 tell("\nYou open the chest and find gold ");
-                if(purse<10) {
-                    int temp = 10-purse;
-                    purse = rand.nextInt(temp)+1;
-                    visitor.giveGold(pos);
+                if (purse < 10) {
+                    int temp = 10 - purse;
+                    purse = rand.nextInt(temp) + 1;
+                    giveGold(pos);
                     tell("\nYou take " + purse + " gold bars");
-                    goldC.setText("Gold: "+purse);
+                    goldC.setText("Gold: " + purse);
                     tell("\nYou also find a key and a pendant inside.");
                     option1.setText("Take the Pendant");
                     option2.setText("Take the key");
@@ -173,80 +179,88 @@ public class GUIVisitor_ec22431 implements Visitor {
 
                     if (purse >= 10) {
                         tell("\nYou have too much gold, in order to take an item you drop a gold bar");
-                        visitor.takeGold(1);
+                        takeGold(1);
                         purse--;
-                        goldC.setText("Gold: "+purse);
+                        goldC.setText("Gold: " + purse);
                     }
-                    option1.addActionListener(actionEvent ->{
-                        visitor.giveItem(pendant);
-                        inventory.put(pendant,1);
-                        if(visitor.hasEqualItem(key)){
+                    option1.addActionListener(actionEvent -> {
+                        giveItem(pendant);
+                        inventory.put(pendant, 1);
+                        if (hasEqualItem(key)) {
                             itemC.setText("Items: Key, Pendant");
+                        } else {
+                            itemC.setText("Items: Pendant");
                         }
-                        else{itemC.setText("Items: Pendant");}
                     });
                     option2.addActionListener(actionEvent -> {
-                        visitor.giveItem(key);
-                        inventory.put(key,2);
-                        if(visitor.hasEqualItem(pendant)){
+                        giveItem(key);
+                        inventory.put(key, 2);
+                        if (hasEqualItem(pendant)) {
                             itemC.setText("Items: Pendant, Key");
+                        } else {
+                            itemC.setText("Items: Key");
                         }
-                        else{itemC.setText("Items: Key");}
                     });
-                }
-                else {
+                } else {
                     tell("\nYou cannot take anymore gold");
                     tell("\nYou also find a key and a pendant inside.");
                     if (purse >= 10) {
                         tell("\nYou have too much gold, in order to take an item you drop a gold bar");
-                        visitor.takeGold(1);
+                        takeGold(1);
                         purse--;
-                        goldC.setText("Gold: "+purse);
+                        goldC.setText("Gold: " + purse);
 
                     }
-                    option1.addActionListener(actionEvent ->{
-                        visitor.giveItem(pendant);
-                        if(visitor.hasEqualItem(key)){
+                    option1.addActionListener(actionEvent -> {
+                        giveItem(pendant);
+                        if (hasEqualItem(key)) {
                             itemC.setText("Items: Key, Pendant");
+                        } else {
+                            itemC.setText("Items: Pendant");
                         }
-                        else{itemC.setText("Items: Pendant");}
                     });
                     option2.addActionListener(actionEvent -> {
-                        visitor.giveItem(key);
-                        if(visitor.hasEqualItem(pendant)){
+                        giveItem(key);
+                        if (hasEqualItem(pendant)) {
                             itemC.setText("Items: Pendant, Key");
+                        } else {
+                            itemC.setText("Items: Key");
                         }
-                        else{itemC.setText("Items: Key");}
                     });
                 }
             } else {
                 tell("\nYou open the chest and find a key and a pendant inside.");
                 if (purse >= 10) {
                     tell("\nYou have too much gold, in order to take an item you drop a gold bar");
-                    visitor.takeGold(1);
+                    takeGold(1);
                     purse--;
-                    goldC.setText("Gold: "+purse);
+                    goldC.setText("Gold: " + purse);
 
                 }
-                option1.addActionListener(actionEvent ->{
-                    visitor.giveItem(pendant);
-                    if(visitor.hasEqualItem(key)){
+                option1.addActionListener(actionEvent -> {
+                    giveItem(pendant);
+                    if (hasEqualItem(key)) {
                         itemC.setText("Items: Key, Pendant");
+                    } else {
+                        itemC.setText("Items: Pendant");
                     }
-                    else{itemC.setText("Items: Pendant");}
                 });
                 option2.addActionListener(actionEvent -> {
-                    visitor.giveItem(key);
-                    if(visitor.hasEqualItem(pendant)){
+                    giveItem(key);
+                    if (hasEqualItem(pendant)) {
                         itemC.setText("Items: Pendant, Key");
+                    } else {
+                        itemC.setText("Items: Key");
                     }
-                    else{itemC.setText("Items: Key");}
                 });
             }
+        }
+        T = true;
+        trunkEmpty = true;
     }
 
     public void tell(String message) {
-        storyText.append(message + "\n");
+        storyText.append(message);
         storyText.setCaretPosition(storyText.getDocument().getLength());
     }
 
@@ -258,6 +272,8 @@ public class GUIVisitor_ec22431 implements Visitor {
         option2.setVisible(true);
         option3.setVisible(false);
         option4.setVisible(false);
+        option1.setText("Yes");
+        option2.setText("No");
 
         option1.addActionListener(actionEvent -> pos = 0);
 

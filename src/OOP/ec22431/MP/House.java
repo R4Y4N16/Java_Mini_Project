@@ -1,2 +1,2 @@
-package OOP.ec22431.A8;
+package OOP.ec22431.MP;
 abstract class House implements Visitable { }

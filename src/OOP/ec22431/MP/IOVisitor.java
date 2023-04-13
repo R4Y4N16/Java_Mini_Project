@@ -1,4 +1,4 @@
-package OOP.ec22431.A8;
+package OOP.ec22431.MP;
 import java.io.PrintStream;
 import java.io.InputStream;
 import java.util.Scanner;
