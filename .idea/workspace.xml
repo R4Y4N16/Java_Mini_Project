@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20586bae-8da6-441a-91b1-ad76fbb351c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A8-ec22431.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MP-ec22431.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/GUIVisitor_ec22431.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/GUIVisitor_ec22431.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/GUIVisitor_ec22431.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/IOVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/IOVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/Visitable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/Visitable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/A8/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/Visitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/MP/GUIVisitor_ec22431.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/MP_ec22431.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OOP/ec22431/MP/GUIVisitor_ec22431.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OOP/ec22431/MP/MP_ec22431.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +69,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="GUIVisitor_ec22431" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="OOP.ec22431.MP.GUIVisitor_ec22431" />
+    <configuration name="MP_ec22431" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OOP.ec22431.MP.MP_ec22431" />
       <module name="MP-ec22431" />
       <extension name="coverage">
         <pattern>
@@ -139,7 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUIVisitor_ec22431" />
+        <item itemvalue="Application.MP_ec22431" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681311556352</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Changed the name">
+      <created>1681387666356</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681387666356</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -226,6 +223,7 @@
     <MESSAGE value="Added contribution folder" />
     <MESSAGE value="Made changes" />
     <MESSAGE value="Added collection object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added collection object" />
+    <MESSAGE value="Changed the name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the name" />
   </component>
 </project>

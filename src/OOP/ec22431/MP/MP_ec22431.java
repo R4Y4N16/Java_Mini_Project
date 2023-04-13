@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
-public class GUIVisitor_ec22431 implements Visitor {
+public class MP_ec22431 implements Visitor {
     static JFrame frame = new JFrame("Room (ec22431)");
     private JButton option1;
     private JButton option2;
@@ -35,7 +35,7 @@ public class GUIVisitor_ec22431 implements Visitor {
 
     public static void main(String[] args) {
         try {
-            frame.setContentPane(new GUIVisitor_ec22431().panelMain);
+            frame.setContentPane(new MP_ec22431().panelMain);
             frame.getContentPane().setPreferredSize(new Dimension(800, 600));
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.getContentPane().setBackground(Color.BLACK);
@@ -48,7 +48,7 @@ public class GUIVisitor_ec22431 implements Visitor {
         }
     }
 
-    public GUIVisitor_ec22431() {
+    public MP_ec22431() {
         lightsOn = false;
         ghostFriendly = false;
         isCold = true;
